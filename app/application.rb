@@ -22,7 +22,7 @@ class Application
     elsif req.path.match(/add/)
       search_term = req.params["item"]
       resp.write "We don't have that item" unless @@items.include?(search_term)
-      resp.write "added Figs" if @@items.include?(search_term)
+      resp.write "added #{item}" if @@items.include?(search_term)
     else
       resp.write "Path Not Found"
     end
